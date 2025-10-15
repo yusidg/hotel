@@ -11,7 +11,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "hotel_type": {
+    "name": {
       "type": "string"
     },
     "hotel": {

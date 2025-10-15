@@ -15,7 +15,7 @@
     "state": {
       "type": "string"
     },
-    "pincode": {
+    "zip_code": {
       "type": "decimal"
     }
   },

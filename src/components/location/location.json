@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_location_locations",
+  "info": {
+    "displayName": "location",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "lat": {
+      "type": "decimal"
+    },
+    "lng": {
+      "type": "decimal"
+    }
+  },
+  "config": {}
+}

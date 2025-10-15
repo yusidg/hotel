@@ -8,9 +8,9 @@ export interface AddressAddress extends Struct.ComponentSchema {
   };
   attributes: {
     city: Schema.Attribute.String;
-    pincode: Schema.Attribute.Decimal;
     state: Schema.Attribute.String;
     Street: Schema.Attribute.String;
+    zip_code: Schema.Attribute.Decimal;
   };
 }
 
@@ -26,6 +26,18 @@ export interface AmenitiesAmenities extends Struct.ComponentSchema {
       true
     >;
     name: Schema.Attribute.String;
+  };
+}
+
+export interface LocationLocation extends Struct.ComponentSchema {
+  collectionName: 'components_location_locations';
+  info: {
+    displayName: 'location';
+    icon: 'crown';
+  };
+  attributes: {
+    lat: Schema.Attribute.Decimal;
+    lng: Schema.Attribute.Decimal;
   };
 }
 
@@ -96,6 +108,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'address.address': AddressAddress;
       'amenities.amenities': AmenitiesAmenities;
+      'location.location': LocationLocation;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

@@ -744,13 +744,13 @@ export interface ApiHotelTypeHotelType extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     hotel: Schema.Attribute.Relation<'manyToOne', 'api::hotel.hotel'>;
-    hotel_type: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::hotel-type.hotel-type'
     > &
       Schema.Attribute.Private;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -790,16 +790,17 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::hotel-type.hotel-type'
     >;
-    images: Schema.Attribute.Media<
+    Images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    is_featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    isFeatured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     listing_type: Schema.Attribute.Enumeration<['car', 'experiences', 'stay']> &
       Schema.Attribute.DefaultTo<'stay'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::hotel.hotel'> &
       Schema.Attribute.Private;
+    location: Schema.Attribute.Component<'location.location', false>;
     max_guests: Schema.Attribute.Decimal;
     name: Schema.Attribute.String;
     price_range: Schema.Attribute.String;
@@ -902,15 +903,17 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
       'api::testimonial.testimonial'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     rating: Schema.Attribute.Integer;
     testimonial_status: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     testimonial_text: Schema.Attribute.String;
+    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    video: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 

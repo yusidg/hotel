@@ -48,7 +48,7 @@
     "view_count": {
       "type": "decimal"
     },
-    "is_featured": {
+    "isFeatured": {
       "type": "boolean",
       "default": false
     },
@@ -116,7 +116,7 @@
       "component": "amenities.amenities",
       "repeatable": true
     },
-    "images": {
+    "Images": {
       "type": "media",
       "multiple": true,
       "allowedTypes": [
@@ -148,6 +148,11 @@
       "relation": "oneToMany",
       "target": "api::review.review",
       "mappedBy": "hotel"
+    },
+    "location": {
+      "type": "component",
+      "component": "location.location",
+      "repeatable": false
     }
   }
 }
