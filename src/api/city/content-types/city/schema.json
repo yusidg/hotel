@@ -49,6 +49,12 @@
         "videos",
         "audios"
       ]
+    },
+    "state": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::state.state",
+      "inversedBy": "cities"
     }
   }
 }

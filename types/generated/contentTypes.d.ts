@@ -665,6 +665,7 @@ export interface ApiCityCity extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
+    state: Schema.Attribute.Relation<'manyToOne', 'api::state.state'>;
     thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -876,6 +877,7 @@ export interface ApiStateState extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    cities: Schema.Attribute.Relation<'oneToMany', 'api::city.city'>;
     code: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
