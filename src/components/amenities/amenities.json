@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_amenities_amenities",
+  "info": {
+    "displayName": "amenities",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

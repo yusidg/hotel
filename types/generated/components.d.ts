@@ -1,5 +1,34 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AddressAddress extends Struct.ComponentSchema {
+  collectionName: 'components_address_addresses';
+  info: {
+    displayName: 'address';
+    icon: 'command';
+  };
+  attributes: {
+    city: Schema.Attribute.String;
+    pincode: Schema.Attribute.Decimal;
+    state: Schema.Attribute.String;
+    Street: Schema.Attribute.String;
+  };
+}
+
+export interface AmenitiesAmenities extends Struct.ComponentSchema {
+  collectionName: 'components_amenities_amenities';
+  info: {
+    displayName: 'amenities';
+    icon: 'crown';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    name: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +94,8 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'address.address': AddressAddress;
+      'amenities.amenities': AmenitiesAmenities;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_address_addresses",
+  "info": {
+    "displayName": "address",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "Street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "pincode": {
+      "type": "decimal"
+    }
+  },
+  "config": {}
+}

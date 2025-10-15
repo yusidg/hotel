@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotel_types",
+  "info": {
+    "singularName": "hotel-type",
+    "pluralName": "hotel-types",
+    "displayName": "hotel_type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hotel_type": {
+      "type": "string"
+    },
+    "hotel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hotel.hotel",
+      "inversedBy": "hotel_types"
+    }
+  }
+}

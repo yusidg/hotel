@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "Customer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "address": {
+      "type": "component",
+      "component": "address.address",
+      "repeatable": false
+    },
+    "is_verified": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  }
+}

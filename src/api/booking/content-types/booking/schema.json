@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "check_in_date": {
+      "type": "datetime"
+    },
+    "check_out_date": {
+      "type": "datetime"
+    },
+    "guests": {
+      "type": "decimal"
+    },
+    "booking_status": {
+      "type": "boolean",
+      "default": true
+    },
+    "total_price": {
+      "type": "decimal"
+    },
+    "username": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "biginteger"
+    },
+    "hotel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hotel.hotel",
+      "inversedBy": "bookings"
+    }
+  }
+}

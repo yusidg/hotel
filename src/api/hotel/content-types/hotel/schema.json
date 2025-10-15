@@ -1,0 +1,153 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotels",
+  "info": {
+    "singularName": "hotel",
+    "pluralName": "hotels",
+    "displayName": "hotel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "price_range": {
+      "type": "string"
+    },
+    "sale_off": {
+      "type": "string"
+    },
+    "max_guests": {
+      "type": "decimal"
+    },
+    "bedrooms": {
+      "type": "integer"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "review_start": {
+      "type": "integer"
+    },
+    "review_count": {
+      "type": "decimal"
+    },
+    "view_count": {
+      "type": "decimal"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "cancellation_policy": {
+      "type": "blocks"
+    },
+    "check_in_start": {
+      "type": "time"
+    },
+    "check_in_end": {
+      "type": "time"
+    },
+    "check_out_start": {
+      "type": "time"
+    },
+    "check_out_end": {
+      "type": "time"
+    },
+    "special_notes": {
+      "type": "blocks"
+    },
+    "taxonomy": {
+      "type": "enumeration",
+      "default": "category",
+      "enum": [
+        "city",
+        "tag",
+        "category"
+      ]
+    },
+    "listing_type": {
+      "type": "enumeration",
+      "default": "stay",
+      "enum": [
+        "car",
+        "experiences",
+        "stay"
+      ]
+    },
+    "hotel_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hotel-type.hotel-type",
+      "mappedBy": "hotel"
+    },
+    "address": {
+      "type": "component",
+      "component": "address.address",
+      "repeatable": false
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "hotels"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "hotel"
+    },
+    "amenities": {
+      "type": "component",
+      "component": "amenities.amenities",
+      "repeatable": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "thumnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "available_rooms": {
+      "type": "decimal"
+    },
+    "hotel_status": {
+      "type": "boolean",
+      "default": true
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "hotel"
+    }
+  }
+}
