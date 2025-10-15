@@ -38,6 +38,15 @@
       "relation": "manyToOne",
       "target": "api::hotel.hotel",
       "inversedBy": "bookings"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "bookings"
+    },
+    "hotel_link": {
+      "type": "string"
     }
   }
 }

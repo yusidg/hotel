@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-15T11:53:19.647Z"
+    "x-generation-date": "2025-10-15T12:40:55.417Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -12576,6 +12576,20 @@
                 ],
                 "example": "string or id"
               },
+              "city": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
+              "hotel_link": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -13682,6 +13696,123 @@
                       }
                     }
                   },
+                  "bookings": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        },
+                        "check_in_date": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "check_out_date": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "guests": {
+                          "type": "number",
+                          "format": "float"
+                        },
+                        "booking_status": {
+                          "type": "boolean"
+                        },
+                        "total_price": {
+                          "type": "number",
+                          "format": "float"
+                        },
+                        "username": {
+                          "type": "string"
+                        },
+                        "phone_number": {
+                          "type": "string",
+                          "pattern": "^\\d*$",
+                          "example": "123456789"
+                        },
+                        "hotel": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "city": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "hotel_link": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "updatedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "publishedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "createdBy": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "updatedBy": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "locale": {
+                          "type": "string"
+                        },
+                        "localizations": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -13745,95 +13876,6 @@
                     },
                     "documentId": {
                       "type": "string"
-                    },
-                    "check_in_date": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "check_out_date": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "guests": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "booking_status": {
-                      "type": "boolean"
-                    },
-                    "total_price": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "username": {
-                      "type": "string"
-                    },
-                    "phone_number": {
-                      "type": "string",
-                      "pattern": "^\\d*$",
-                      "example": "123456789"
-                    },
-                    "hotel": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "createdAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "createdBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "updatedBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "locale": {
-                      "type": "string"
-                    },
-                    "localizations": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      }
                     }
                   }
                 }
@@ -14258,6 +14300,20 @@
                 }
               }
             }
+          },
+          "city": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "documentId": {
+                "type": "string"
+              }
+            }
+          },
+          "hotel_link": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -15955,6 +16011,20 @@
                 ],
                 "example": "string or id"
               },
+              "bookings": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
               "locale": {
                 "type": "string"
               },
@@ -17046,6 +17116,123 @@
                         }
                       }
                     },
+                    "bookings": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          },
+                          "check_in_date": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "check_out_date": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "guests": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "booking_status": {
+                            "type": "boolean"
+                          },
+                          "total_price": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "username": {
+                            "type": "string"
+                          },
+                          "phone_number": {
+                            "type": "string",
+                            "pattern": "^\\d*$",
+                            "example": "123456789"
+                          },
+                          "hotel": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "city": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "hotel_link": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "updatedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "publishedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "createdBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "updatedBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "locale": {
+                            "type": "string"
+                          },
+                          "localizations": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -17109,95 +17296,6 @@
                       },
                       "documentId": {
                         "type": "string"
-                      },
-                      "check_in_date": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "check_out_date": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "guests": {
-                        "type": "number",
-                        "format": "float"
-                      },
-                      "booking_status": {
-                        "type": "boolean"
-                      },
-                      "total_price": {
-                        "type": "number",
-                        "format": "float"
-                      },
-                      "username": {
-                        "type": "string"
-                      },
-                      "phone_number": {
-                        "type": "string",
-                        "pattern": "^\\d*$",
-                        "example": "123456789"
-                      },
-                      "hotel": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      },
-                      "createdAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "updatedAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "publishedAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "createdBy": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      },
-                      "updatedBy": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      },
-                      "locale": {
-                        "type": "string"
-                      },
-                      "localizations": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "number"
-                            },
-                            "documentId": {
-                              "type": "string"
-                            }
-                          }
-                        }
                       }
                     }
                   }
@@ -17893,6 +17991,20 @@
               },
               "documentId": {
                 "type": "string"
+              }
+            }
+          },
+          "bookings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "documentId": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -20861,6 +20973,123 @@
                             }
                           }
                         },
+                        "bookings": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              },
+                              "check_in_date": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "check_out_date": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "guests": {
+                                "type": "number",
+                                "format": "float"
+                              },
+                              "booking_status": {
+                                "type": "boolean"
+                              },
+                              "total_price": {
+                                "type": "number",
+                                "format": "float"
+                              },
+                              "username": {
+                                "type": "string"
+                              },
+                              "phone_number": {
+                                "type": "string",
+                                "pattern": "^\\d*$",
+                                "example": "123456789"
+                              },
+                              "hotel": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "documentId": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "city": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "documentId": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "hotel_link": {
+                                "type": "string"
+                              },
+                              "createdAt": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "updatedAt": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "publishedAt": {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              "createdBy": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "documentId": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "updatedBy": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "documentId": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "locale": {
+                                "type": "string"
+                              },
+                              "localizations": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "documentId": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -20924,95 +21153,6 @@
                           },
                           "documentId": {
                             "type": "string"
-                          },
-                          "check_in_date": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "check_out_date": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "guests": {
-                            "type": "number",
-                            "format": "float"
-                          },
-                          "booking_status": {
-                            "type": "boolean"
-                          },
-                          "total_price": {
-                            "type": "number",
-                            "format": "float"
-                          },
-                          "username": {
-                            "type": "string"
-                          },
-                          "phone_number": {
-                            "type": "string",
-                            "pattern": "^\\d*$",
-                            "example": "123456789"
-                          },
-                          "hotel": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "number"
-                              },
-                              "documentId": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "updatedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "publishedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "createdBy": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "number"
-                              },
-                              "documentId": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "updatedBy": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "number"
-                              },
-                              "documentId": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "locale": {
-                            "type": "string"
-                          },
-                          "localizations": {
-                            "type": "array",
-                            "items": {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "number"
-                                },
-                                "documentId": {
-                                  "type": "string"
-                                }
-                              }
-                            }
                           }
                         }
                       }
@@ -22980,6 +23120,123 @@
                       }
                     }
                   },
+                  "bookings": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        },
+                        "check_in_date": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "check_out_date": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "guests": {
+                          "type": "number",
+                          "format": "float"
+                        },
+                        "booking_status": {
+                          "type": "boolean"
+                        },
+                        "total_price": {
+                          "type": "number",
+                          "format": "float"
+                        },
+                        "username": {
+                          "type": "string"
+                        },
+                        "phone_number": {
+                          "type": "string",
+                          "pattern": "^\\d*$",
+                          "example": "123456789"
+                        },
+                        "hotel": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "city": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "hotel_link": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "updatedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "publishedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "createdBy": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "updatedBy": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "locale": {
+                          "type": "string"
+                        },
+                        "localizations": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -23043,95 +23300,6 @@
                     },
                     "documentId": {
                       "type": "string"
-                    },
-                    "check_in_date": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "check_out_date": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "guests": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "booking_status": {
-                      "type": "boolean"
-                    },
-                    "total_price": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "username": {
-                      "type": "string"
-                    },
-                    "phone_number": {
-                      "type": "string",
-                      "pattern": "^\\d*$",
-                      "example": "123456789"
-                    },
-                    "hotel": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "createdAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "createdBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "updatedBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "locale": {
-                      "type": "string"
-                    },
-                    "localizations": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      }
                     }
                   }
                 }
@@ -24735,6 +24903,123 @@
                       }
                     }
                   },
+                  "bookings": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        },
+                        "check_in_date": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "check_out_date": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "guests": {
+                          "type": "number",
+                          "format": "float"
+                        },
+                        "booking_status": {
+                          "type": "boolean"
+                        },
+                        "total_price": {
+                          "type": "number",
+                          "format": "float"
+                        },
+                        "username": {
+                          "type": "string"
+                        },
+                        "phone_number": {
+                          "type": "string",
+                          "pattern": "^\\d*$",
+                          "example": "123456789"
+                        },
+                        "hotel": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "city": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "hotel_link": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "updatedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "publishedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "createdBy": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "updatedBy": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "locale": {
+                          "type": "string"
+                        },
+                        "localizations": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -24798,95 +25083,6 @@
                     },
                     "documentId": {
                       "type": "string"
-                    },
-                    "check_in_date": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "check_out_date": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "guests": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "booking_status": {
-                      "type": "boolean"
-                    },
-                    "total_price": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "username": {
-                      "type": "string"
-                    },
-                    "phone_number": {
-                      "type": "string",
-                      "pattern": "^\\d*$",
-                      "example": "123456789"
-                    },
-                    "hotel": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "createdAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "createdBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "updatedBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "locale": {
-                      "type": "string"
-                    },
-                    "localizations": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      }
                     }
                   }
                 }
@@ -25995,6 +26191,20 @@
                                 }
                               }
                             },
+                            "city": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "hotel_link": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -26810,6 +27020,20 @@
                             "type": "string"
                           }
                         }
+                      }
+                    }
+                  }
+                },
+                "bookings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "documentId": {
+                        "type": "string"
                       }
                     }
                   }

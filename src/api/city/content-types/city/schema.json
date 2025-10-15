@@ -55,6 +55,12 @@
       "relation": "manyToOne",
       "target": "api::state.state",
       "inversedBy": "cities"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "city"
     }
   }
 }

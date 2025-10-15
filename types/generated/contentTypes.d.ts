@@ -585,11 +585,13 @@ export interface ApiBookingBooking extends Struct.CollectionTypeSchema {
     booking_status: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     check_in_date: Schema.Attribute.DateTime;
     check_out_date: Schema.Attribute.DateTime;
+    city: Schema.Attribute.Relation<'manyToOne', 'api::city.city'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     guests: Schema.Attribute.Decimal;
     hotel: Schema.Attribute.Relation<'manyToOne', 'api::hotel.hotel'>;
+    hotel_link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -649,6 +651,7 @@ export interface ApiCityCity extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    bookings: Schema.Attribute.Relation<'oneToMany', 'api::booking.booking'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
