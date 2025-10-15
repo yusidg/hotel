@@ -11,13 +11,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "check_in_date": {
+    "Check_in_Date": {
       "type": "datetime"
     },
-    "check_out_date": {
+    "Check_out_Date": {
       "type": "datetime"
     },
-    "guests": {
+    "Guests": {
       "type": "decimal"
     },
     "booking_status": {

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-15T12:40:55.417Z"
+    "x-generation-date": "2025-10-15T12:50:30.004Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -12538,15 +12538,15 @@
           "data": {
             "type": "object",
             "properties": {
-              "check_in_date": {
+              "Check_in_Date": {
                 "type": "string",
                 "format": "date-time"
               },
-              "check_out_date": {
+              "Check_out_Date": {
                 "type": "string",
                 "format": "date-time"
               },
-              "guests": {
+              "Guests": {
                 "type": "number",
                 "format": "float"
               },
@@ -12655,15 +12655,15 @@
           "documentId": {
             "type": "string"
           },
-          "check_in_date": {
+          "Check_in_Date": {
             "type": "string",
             "format": "date-time"
           },
-          "check_out_date": {
+          "Check_out_Date": {
             "type": "string",
             "format": "date-time"
           },
-          "guests": {
+          "Guests": {
             "type": "number",
             "format": "float"
           },
@@ -13707,15 +13707,15 @@
                         "documentId": {
                           "type": "string"
                         },
-                        "check_in_date": {
+                        "Check_in_Date": {
                           "type": "string",
                           "format": "date-time"
                         },
-                        "check_out_date": {
+                        "Check_out_Date": {
                           "type": "string",
                           "format": "date-time"
                         },
-                        "guests": {
+                        "Guests": {
                           "type": "number",
                           "format": "float"
                         },
@@ -17127,15 +17127,15 @@
                           "documentId": {
                             "type": "string"
                           },
-                          "check_in_date": {
+                          "Check_in_Date": {
                             "type": "string",
                             "format": "date-time"
                           },
-                          "check_out_date": {
+                          "Check_out_Date": {
                             "type": "string",
                             "format": "date-time"
                           },
-                          "guests": {
+                          "Guests": {
                             "type": "number",
                             "format": "float"
                           },
@@ -20984,15 +20984,15 @@
                               "documentId": {
                                 "type": "string"
                               },
-                              "check_in_date": {
+                              "Check_in_Date": {
                                 "type": "string",
                                 "format": "date-time"
                               },
-                              "check_out_date": {
+                              "Check_out_Date": {
                                 "type": "string",
                                 "format": "date-time"
                               },
-                              "guests": {
+                              "Guests": {
                                 "type": "number",
                                 "format": "float"
                               },
@@ -23131,15 +23131,15 @@
                         "documentId": {
                           "type": "string"
                         },
-                        "check_in_date": {
+                        "Check_in_Date": {
                           "type": "string",
                           "format": "date-time"
                         },
-                        "check_out_date": {
+                        "Check_out_Date": {
                           "type": "string",
                           "format": "date-time"
                         },
-                        "guests": {
+                        "Guests": {
                           "type": "number",
                           "format": "float"
                         },
@@ -24914,15 +24914,15 @@
                         "documentId": {
                           "type": "string"
                         },
-                        "check_in_date": {
+                        "Check_in_Date": {
                           "type": "string",
                           "format": "date-time"
                         },
-                        "check_out_date": {
+                        "Check_out_Date": {
                           "type": "string",
                           "format": "date-time"
                         },
-                        "guests": {
+                        "Guests": {
                           "type": "number",
                           "format": "float"
                         },
@@ -26153,15 +26153,15 @@
                             "documentId": {
                               "type": "string"
                             },
-                            "check_in_date": {
+                            "Check_in_Date": {
                               "type": "string",
                               "format": "date-time"
                             },
-                            "check_out_date": {
+                            "Check_out_Date": {
                               "type": "string",
                               "format": "date-time"
                             },
-                            "guests": {
+                            "Guests": {
                               "type": "number",
                               "format": "float"
                             },
