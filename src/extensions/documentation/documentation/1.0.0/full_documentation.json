@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-16T07:20:07.755Z"
+    "x-generation-date": "2025-10-16T08:23:25.525Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -12769,7 +12769,7 @@
                   "stay"
                 ]
               },
-              "hotel_types": {
+              "hotel_type": {
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -14262,7 +14262,7 @@
               "location": {
                 "$ref": "#/components/schemas/LocationLocationComponent"
               },
-              "states": {
+              "state": {
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -16217,7 +16217,7 @@
                     "stay"
                   ]
                 },
-                "hotel_types": {
+                "hotel_type": {
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -17710,7 +17710,7 @@
                 "location": {
                   "$ref": "#/components/schemas/LocationLocationComponent"
                 },
-                "states": {
+                "state": {
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -19826,7 +19826,7 @@
                   "stay"
                 ]
               },
-              "hotel_types": {
+              "hotel_type": {
                 "type": "array",
                 "items": {
                   "oneOf": [
@@ -19923,7 +19923,7 @@
               "location": {
                 "$ref": "#/components/schemas/LocationLocationComponent"
               },
-              "states": {
+              "state": {
                 "type": "array",
                 "items": {
                   "oneOf": [
@@ -20080,7 +20080,7 @@
               "stay"
             ]
           },
-          "hotel_types": {
+          "hotel_type": {
             "type": "array",
             "items": {
               "type": "object",
@@ -20181,7 +20181,7 @@
                         "stay"
                       ]
                     },
-                    "hotel_types": {
+                    "hotel_type": {
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -21609,7 +21609,7 @@
                     "location": {
                       "$ref": "#/components/schemas/LocationLocationComponent"
                     },
-                    "states": {
+                    "state": {
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -22049,7 +22049,7 @@
           "location": {
             "$ref": "#/components/schemas/LocationLocationComponent"
           },
-          "states": {
+          "state": {
             "type": "array",
             "items": {
               "type": "object",
@@ -22305,7 +22305,7 @@
                   "stay"
                 ]
               },
-              "hotel_types": {
+              "hotel_type": {
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -23798,7 +23798,7 @@
               "location": {
                 "$ref": "#/components/schemas/LocationLocationComponent"
               },
-              "states": {
+              "state": {
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -24116,7 +24116,7 @@
                   "stay"
                 ]
               },
-              "hotel_types": {
+              "hotel_type": {
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -25609,7 +25609,7 @@
               "location": {
                 "$ref": "#/components/schemas/LocationLocationComponent"
               },
-              "states": {
+              "state": {
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -25979,7 +25979,7 @@
                           "stay"
                         ]
                       },
-                      "hotel_types": {
+                      "hotel_type": {
                         "type": "array",
                         "items": {
                           "type": "object",
@@ -26809,7 +26809,7 @@
                       "location": {
                         "$ref": "#/components/schemas/LocationLocationComponent"
                       },
-                      "states": {
+                      "state": {
                         "type": "array",
                         "items": {
                           "type": "object",

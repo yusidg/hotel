@@ -88,7 +88,7 @@
         "stay"
       ]
     },
-    "hotel_types": {
+    "hotel_type": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::hotel-type.hotel-type",
@@ -154,7 +154,7 @@
       "component": "location.location",
       "repeatable": false
     },
-    "states": {
+    "state": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::state.state",

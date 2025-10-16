@@ -27,7 +27,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::hotel.hotel",
-      "mappedBy": "states"
+      "mappedBy": "state"
     }
   }
 }

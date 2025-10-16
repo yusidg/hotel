@@ -800,7 +800,7 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
     hotel_status: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    hotel_types: Schema.Attribute.Relation<
+    hotel_type: Schema.Attribute.Relation<
       'oneToMany',
       'api::hotel-type.hotel-type'
     >;
@@ -826,7 +826,7 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     sale_off: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'name'>;
     special_notes: Schema.Attribute.Blocks;
-    states: Schema.Attribute.Relation<'manyToMany', 'api::state.state'>;
+    state: Schema.Attribute.Relation<'manyToMany', 'api::state.state'>;
     taxonomy: Schema.Attribute.Enumeration<['city', 'tag', 'category']> &
       Schema.Attribute.DefaultTo<'category'>;
     thumnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
