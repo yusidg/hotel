@@ -826,6 +826,7 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     sale_off: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'name'>;
     special_notes: Schema.Attribute.Blocks;
+    states: Schema.Attribute.Relation<'manyToMany', 'api::state.state'>;
     taxonomy: Schema.Attribute.Enumeration<['city', 'tag', 'category']> &
       Schema.Attribute.DefaultTo<'category'>;
     thumnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
@@ -885,6 +886,7 @@ export interface ApiStateState extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    hotels: Schema.Attribute.Relation<'manyToMany', 'api::hotel.hotel'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::state.state'> &
       Schema.Attribute.Private;

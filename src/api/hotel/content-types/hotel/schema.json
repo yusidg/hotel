@@ -153,6 +153,12 @@
       "type": "component",
       "component": "location.location",
       "repeatable": false
+    },
+    "states": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::state.state",
+      "inversedBy": "hotels"
     }
   }
 }

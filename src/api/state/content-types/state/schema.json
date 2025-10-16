@@ -22,6 +22,12 @@
       "relation": "oneToMany",
       "target": "api::city.city",
       "mappedBy": "state"
+    },
+    "hotels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::hotel.hotel",
+      "mappedBy": "states"
     }
   }
 }
