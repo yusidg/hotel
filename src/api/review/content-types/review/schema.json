@@ -38,7 +38,7 @@
       "type": "string"
     },
     "phone_number": {
-      "type": "integer"
+      "type": "biginteger"
     }
   }
 }

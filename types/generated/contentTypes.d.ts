@@ -860,7 +860,7 @@ export interface ApiReviewReview extends Struct.CollectionTypeSchema {
       'api::review.review'
     > &
       Schema.Attribute.Private;
-    phone_number: Schema.Attribute.Integer;
+    phone_number: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
     Rating: Schema.Attribute.Decimal;
     review_status: Schema.Attribute.Enumeration<

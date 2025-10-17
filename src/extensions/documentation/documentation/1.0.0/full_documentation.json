@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-17T10:33:55.416Z"
+    "x-generation-date": "2025-10-17T10:55:04.891Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -14213,7 +14213,9 @@
                       "type": "string"
                     },
                     "phone_number": {
-                      "type": "integer"
+                      "type": "string",
+                      "pattern": "^\\d*$",
+                      "example": "123456789"
                     },
                     "createdAt": {
                       "type": "string",
@@ -17671,7 +17673,9 @@
                         "type": "string"
                       },
                       "phone_number": {
-                        "type": "integer"
+                        "type": "string",
+                        "pattern": "^\\d*$",
+                        "example": "123456789"
                       },
                       "createdAt": {
                         "type": "string",
@@ -21580,7 +21584,9 @@
                             "type": "string"
                           },
                           "phone_number": {
-                            "type": "integer"
+                            "type": "string",
+                            "pattern": "^\\d*$",
+                            "example": "123456789"
                           },
                           "createdAt": {
                             "type": "string",
@@ -23779,7 +23785,9 @@
                       "type": "string"
                     },
                     "phone_number": {
-                      "type": "integer"
+                      "type": "string",
+                      "pattern": "^\\d*$",
+                      "example": "123456789"
                     },
                     "createdAt": {
                       "type": "string",
@@ -24012,7 +24020,9 @@
                 "type": "string"
               },
               "phone_number": {
-                "type": "integer"
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
               },
               "locale": {
                 "type": "string"
@@ -25610,7 +25620,9 @@
                       "type": "string"
                     },
                     "phone_number": {
-                      "type": "integer"
+                      "type": "string",
+                      "pattern": "^\\d*$",
+                      "example": "123456789"
                     },
                     "createdAt": {
                       "type": "string",
@@ -25759,7 +25771,9 @@
             "type": "string"
           },
           "phone_number": {
-            "type": "integer"
+            "type": "string",
+            "pattern": "^\\d*$",
+            "example": "123456789"
           },
           "createdAt": {
             "type": "string",
@@ -26830,7 +26844,9 @@
                               "type": "string"
                             },
                             "phone_number": {
-                              "type": "integer"
+                              "type": "string",
+                              "pattern": "^\\d*$",
+                              "example": "123456789"
                             },
                             "createdAt": {
                               "type": "string",
