@@ -860,7 +860,7 @@ export interface ApiReviewReview extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    rating: Schema.Attribute.Decimal;
+    Rating: Schema.Attribute.Decimal;
     review_status: Schema.Attribute.Enumeration<
       ['pending', 'approved ', 'rejected']
     >;

@@ -17,7 +17,7 @@
       "target": "api::hotel.hotel",
       "inversedBy": "reviews"
     },
-    "rating": {
+    "Rating": {
       "type": "decimal"
     },
     "comment": {
