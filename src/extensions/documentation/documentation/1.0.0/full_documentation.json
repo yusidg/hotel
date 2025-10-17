@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-17T10:29:23.498Z"
+    "x-generation-date": "2025-10-17T10:33:55.416Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -14205,6 +14205,16 @@
                         "rejected"
                       ]
                     },
+                    "date": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "phone_number": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -17652,6 +17662,16 @@
                           "approved ",
                           "rejected"
                         ]
+                      },
+                      "date": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "username": {
+                        "type": "string"
+                      },
+                      "phone_number": {
+                        "type": "integer"
                       },
                       "createdAt": {
                         "type": "string",
@@ -21552,6 +21572,16 @@
                               "rejected"
                             ]
                           },
+                          "date": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "username": {
+                            "type": "string"
+                          },
+                          "phone_number": {
+                            "type": "integer"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -23741,6 +23771,16 @@
                         "rejected"
                       ]
                     },
+                    "date": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "phone_number": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -23963,6 +24003,16 @@
                   "approved ",
                   "rejected"
                 ]
+              },
+              "date": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "username": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "integer"
               },
               "locale": {
                 "type": "string"
@@ -25552,6 +25602,16 @@
                         "rejected"
                       ]
                     },
+                    "date": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "phone_number": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -25690,6 +25750,16 @@
               "approved ",
               "rejected"
             ]
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "username": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",
@@ -26751,6 +26821,16 @@
                                 "approved ",
                                 "rejected"
                               ]
+                            },
+                            "date": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "username": {
+                              "type": "string"
+                            },
+                            "phone_number": {
+                              "type": "integer"
                             },
                             "createdAt": {
                               "type": "string",
